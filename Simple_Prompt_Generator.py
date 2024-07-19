@@ -2,14 +2,15 @@ from openai import OpenAI
 import re
 
 MODEL_NAME = "claude-3-5-sonnet-20240620"
-API_KEY = (
-    ""  # Put your API key here!
-)
+
+# Put your API key here!
+API_KEY = ""
+# Put your API base URL here!
+BASE_URL = ""
+
 CLIENT = OpenAI(
-    # #将这里换成你的密钥
     api_key=API_KEY,
-    # 接口访问地址
-    base_url="",
+    base_url=BASE_URL,
 )
 
 
@@ -485,7 +486,7 @@ Note: If the task is particularly complicated, you may wish to instruct the AI t
 Note: If you want the AI to output its entire response or parts of its response inside certain tags, specify the name of these tags (e.g. "write your answer inside <answer> tags") but do not include closing tags or unnecessary open-and-close tag sections."""
 
 
-TASK = "使用中文帮我构建一个致力于青少年认知行为疗法的心里咨询助手"  # Replace with your task!
+TASK = "帮我构建一个致力于青少年认知行为疗法的心里咨询助手，用中文回答"  # Replace with your task!
 # Optional: specify the input variables you want Claude to use. If you want Claude to choose, you can set `variables` to an empty list!
 VARIABLES = []
 # VARIABLES = ["CUSTOMER_COMPLAINT", "COMPANY_NAME"]
